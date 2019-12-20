@@ -1,6 +1,6 @@
 package com.gene.dao.mapper;
 
-import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.gene.dao.entity.Ship;
 import org.springframework.stereotype.Repository;
 
