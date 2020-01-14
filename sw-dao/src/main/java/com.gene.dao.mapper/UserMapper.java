@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper extends BaseMapper<User> {
 
+    User getUserByRawHeadImgUrl(String rawHeadImgUrl)throws Exception;
 
 }

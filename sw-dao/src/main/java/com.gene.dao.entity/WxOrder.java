@@ -1,35 +1,55 @@
 package com.gene.dao.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+//@Data
+@TableName("wx_order")
 public class WxOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId(value = "no",type = IdType.AUTO)
     private String no;
 
+    @TableField("donate_id")
     private String donateId;
 
+    @TableField("return_code")
     private String returnCode;
 
+    @TableField("return_msg")
     private String returnMsg;
 
+    @TableField("status")
     private Integer status;
 
+    @TableField("prepay_id")
     private String prepayId;
 
+    @TableField("is_subscribe")
     private Integer isSubscribe;
 
+    @TableField("create_time")
     private Date createTime;
 
+    @TableField("update_time")
     private Date updateTime;
 
+    @TableField("transaction_id")
     private String transactionId;
 
+    @TableField("pay_time")
     private Date payTime;
 
+    @TableField("amount")
     private BigDecimal amount;
 
     public String getNo() {

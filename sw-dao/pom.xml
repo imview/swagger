@@ -76,6 +76,15 @@
 <!--            <version>2.5.4</version>-->
         </dependency>
 
+        <!--  Lombok能以简单的注解形式来简化java代码，提高开发人员的开发效率-->
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+<!--            <version>1.18.6</version>-->
+        </dependency>
+
         <!-- 多模块依赖 -->
         <dependency>
             <groupId>com.gene</groupId>

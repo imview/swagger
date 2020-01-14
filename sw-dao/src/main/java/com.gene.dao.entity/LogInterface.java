@@ -1,26 +1,40 @@
 package com.gene.dao.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
+//@Data
+@TableName("log_interface")
 public class LogInterface implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId(value = "id",type = IdType.AUTO)
     private String id;
 
+    @TableField("open_id")
     private String openId;
 
+    @TableField("wx_order_no")
     private String wxOrderNo;
 
+    @TableField("url")
     private String url;
 
+    @TableField("request")
     private String request;
 
+    @TableField("response")
     private String response;
 
+    @TableField("create_time")
     private Date createTime;
-
 
     public String getId() {
         return id;

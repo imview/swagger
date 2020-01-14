@@ -1,35 +1,57 @@
 package com.gene.dao.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+
+//@Data
+@TableName("donate")
 public class Donate implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId(value="open_id",type= IdType.AUTO)
     private String id;
 
+    @TableField("amount")
     private BigDecimal amount;
 
+//    @TableField("amount_str")
     private String amountStr;
 
+    @TableField("user_name")
     private String userName;
 
+    @TableField("mobile")
     private String mobile;
 
+    @TableField("school_class")
     private String schoolClass;
 
+    @TableField("period")
     private String period;
 
+    @TableField("open_id")
     private String openId;
 
+    @TableField("nick_name")
     private String nickName;
 
+    @TableField("head_img_url")
     private String headImgUrl;
 
+    @TableField("wx_order_no")
     private String wxOrderNo;
 
+    @TableField("create_time")
     private Date createTime;
+
 
     public String getId() {
         return id;

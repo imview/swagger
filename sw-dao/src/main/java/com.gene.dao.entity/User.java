@@ -1,34 +1,56 @@
 package com.gene.dao.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
+//@Data
+@TableName("user")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId(value="open_id",type= IdType.AUTO)
     private String openId;
 
+    @TableField("nick_name")
+//    @Size(min = 4, max = 10, message = "{range}")
+//    @ExcelField(value = "用户名")
     private String nickName;
 
+    @TableField("sex")
     private Integer sex;
 
+    @TableField("province")
     private String province;
 
+    @TableField("city")
     private String city;
 
+    @TableField("country")
     private String country;
 
+    @TableField("head_img_url")
     private String headImgUrl;
 
+    @TableField("raw_head_img_url")
     private String rawHeadImgUrl;
 
+    @TableField("privilege")
     private String privilege;
 
+    @TableField("union_id")
     private String unionId;
 
+    @TableField("create_time")
     private Date createTime;
 
+    @TableField("update_time")
     private Date updateTime;
 
     public String getOpenId() {
